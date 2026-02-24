@@ -5,7 +5,7 @@ Java continua a essere uno dei linguaggi di programmazione più popolari e utili
 ---
 
 ### 1. **Orientato agli oggetti:**
-   - Java adotta appieno il paradigma della programmazione orientata agli oggetti (OOP), facilitando la creazione di codice modulare e riutilizzabile. Concetti come ereditarietà, incapsulamento, polimorfismo e astrazione sono fondamentali.
+   - Java adotta appieno il paradigma della programmazione orientata agli oggetti (OOP), facilitando la creazione di codice modulare e riutilizzabile. Concetti come ** ereditarietà, incapsulamento, polimorfismo e astrazione** sono fondamentali.
    - **Novità 2024:** con l'evoluzione del linguaggio, strumenti come i **record** e le **sealed classes** rendono la gestione delle gerarchie di oggetti più semplice e sicura.
 
 ### 2. **Gestione automatica della memoria:**
