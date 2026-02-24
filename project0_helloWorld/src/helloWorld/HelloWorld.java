@@ -17,6 +17,5 @@ public class HelloWorld {
 		System.out.println("Sto partecipando al corso di " + nomeCorso + " presso " + sede);
 		//utilizzo l'operatore + per concatenare delle variabili
 
-		
 	}
 }
