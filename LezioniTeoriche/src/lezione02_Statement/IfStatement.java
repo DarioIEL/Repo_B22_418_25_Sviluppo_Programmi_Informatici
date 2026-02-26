@@ -1,4 +1,4 @@
-package lezione01_Intro;
+package lezione02_Statement;
 
 public class IfStatement {
 
@@ -7,7 +7,7 @@ public class IfStatement {
 		/**
 		 * SINTASSI:
 		 *  if(condizione){
-		 * 	    	corpo dell'if, viene eseguito quando la condiozione è true
+		 * 	    	corpo dell'if, viene eseguito quando la condizione è true
 		 *   }
 		 *   else if(condizione){ [OPZIONALE]
 		 *   
@@ -30,7 +30,7 @@ public class IfStatement {
 		
 		//Esempio
 		
-		int miaEta = 15;
+		int miaEta = 25;
 		
 		if(miaEta > 80) {
 			System.out.println("Mi spiace, sei troppo grande per entrare");
@@ -41,6 +41,7 @@ public class IfStatement {
 		}else {
 			System.out.println("Mi spiace, non puoi proprio entrare");
 		}
+		
 		
 	}
 	

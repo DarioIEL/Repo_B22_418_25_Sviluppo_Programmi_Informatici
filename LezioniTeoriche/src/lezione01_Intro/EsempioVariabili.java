@@ -36,6 +36,15 @@ public class EsempioVariabili {
 		}
 		
 		
+		//NON posso dichiarare 2 variabili con lo stesso nome
+		String mioNome = "Dario";
+//		String mioNome = "Anna";
+		
+		//Posso riassegnare una variabile
+		mioNome = "Anna";
+		mioNome = "Paolo";
+		mioNome = "Gennaro";
+		
 		
 	}
 }

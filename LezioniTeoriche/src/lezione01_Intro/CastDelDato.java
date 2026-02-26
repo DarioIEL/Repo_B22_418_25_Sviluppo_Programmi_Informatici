@@ -18,6 +18,13 @@ public class CastDelDato {
 		System.out.println(num3B);
 		
 		
+		byte mioNumero = 3;
+		
+		int tuoNumero = (int) mioNumero;
+		
+		System.out.println("Il tuo numero vale: " + tuoNumero);
+		
+		
 		//Operazione matematica
 		int a = 25;
 		int b = 3;

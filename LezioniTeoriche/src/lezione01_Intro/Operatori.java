@@ -13,6 +13,15 @@ public class Operatori {
 		int resto2 = 22 % 11;
 		System.out.println(resto2);
 		
+		double numero = Math.sqrt(81);
+		double numRand = Math.random(); //Viene prodotto un numero compreso tra 0.0(incluso) e 1(escluso)
+		System.out.println(numRand);
+		
+		
+		int numCasuale =(int)Math.ceil(Math.random() * 10);
+		System.out.println("Num Casuale: " + numCasuale);
+		
+		
 		//Operatori di confronto o relazionale --> producono sempre un valore boolean
 		//> (maggiore) < (minore) >= (maggiore uguale) <= (minore uguale)
 		// == (uguale a)

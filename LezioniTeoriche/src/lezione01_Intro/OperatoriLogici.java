@@ -23,7 +23,7 @@ public class OperatoriLogici {
 		
 		//Posso guidare la moto se ho un'età compresa tra 24 e 80 anni
 		
-		if( miaEta >= 24 && miaEta <= 80) { // 24 <= miaEta <= 80
+		if( miaEta >= 24 && miaEta <= 80 ) { // 24 <= miaEta <= 80
 			System.out.println("Puoi guidare la moto");
 		}else if( miaEta < 24 && miaEta >= 18) {
 			System.out.println("Sei ancora troppo piccolo per guidare la moto");
@@ -34,7 +34,7 @@ public class OperatoriLogici {
 		}
 		
 		
-		//Esempio festa: posso partecipare solo se sono maggiore e ho un invito
+		//Esempio festa: posso partecipare solo se sono maggiorenne e ho un invito
 		
 		int etaUser = 30;
 		boolean invito = false;
