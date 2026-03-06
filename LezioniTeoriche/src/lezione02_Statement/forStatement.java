@@ -10,8 +10,10 @@ public class forStatement {
 		 * i++){ ..corpo del for viene eseguito fino a che la condizione è true }
 		 * 
 		 * 
-		 * 1° giro -> i = 0 ; 0 < 3 (true); 1 2° giro -> i = 1 ; 1 < 3 (true); 2 3° giro
-		 * -> i = 2 ; 2 < 3 (true); 3 4° giro -> i = 3 ; 3 < 3 (false) XXXXXXXXX
+		 * 1° giro -> i = 0 ; 0 < 3 (true); 1 
+		 * 2° giro -> i = 1 ; 1 < 3 (true); 2 
+		 * 3° giro -> i = 2 ; 2 < 3 (true); 3 
+		 * 4° giro -> i = 3 ; 3 < 3 (false) XXXXXXXXX
 		 */
 
 		for (int i = 0; i < 10; i++) {
@@ -23,6 +25,7 @@ public class forStatement {
 			System.out.println("Ciao al contrario " + i);
 		}
 
+		
 		// For con doppia variabile
 		for (int a = 0, b = 10; b >= 0 && a <= 10; b--, a++) {
 			System.out.println("a vale: " + a + " - b vale: " + b);
@@ -41,7 +44,7 @@ public class forStatement {
 
 		System.out.println("Stesso for con il continue");
 
-		for (int i = 0; i < 5; i++) {
+		for(int i = 0; i < 5; i++) {
 			if (i == 3) {
 				continue;
 			}

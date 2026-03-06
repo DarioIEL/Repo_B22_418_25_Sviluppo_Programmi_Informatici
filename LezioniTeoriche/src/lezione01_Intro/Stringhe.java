@@ -1,5 +1,7 @@
 package lezione01_Intro;
 
+import lezione3_Metodi.Intro;
+
 public class Stringhe {
 	public static void main(String[] args) {
 		
@@ -43,6 +45,8 @@ public class Stringhe {
 		}else {
 			System.out.println("Abbiamo due nomi diversi");
 		}
+		
+		
 		
 	}
 }
