@@ -14,7 +14,8 @@ public class MainMenu {
 			System.out.println("1. Lancia i Dadi");
 			System.out.println("2. Estrai dei Numeri");
 			System.out.println("3. Multipli");
-			System.out.println("4. ESCI");
+			System.out.println("4. Triangoli");
+			System.out.println("5. ESCI");
 			System.out.println("==============");
 
 			scelta = mioScann.next().charAt(0);
@@ -28,8 +29,12 @@ public class MainMenu {
 				break;
 			case '3':
 				System.out.println("Stai giocando con i multipli");
-				break;
+				Multipli.menuMultipli();
+				break;				
 			case '4':
+				System.out.println("Hai deciso di stampare i triangoli");
+				break;
+			case '5':
 			case 'q':
 			case 'Q':
 				System.out.println("Hai scelto di uscire...");
