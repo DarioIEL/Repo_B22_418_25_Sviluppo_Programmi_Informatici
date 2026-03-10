@@ -23,7 +23,6 @@ public class Tombola {
 
 		Scanner mioScan = new Scanner(System.in);
 		System.out.println("Quanti numeri vuoi estrarre ?");
-
 		int numeriDaEstrarre = mioScan.nextInt();
 		if (numeriDaEstrarre <= 90) {
 			return numeriDaEstrarre;
