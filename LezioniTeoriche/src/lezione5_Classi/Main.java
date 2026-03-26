@@ -20,6 +20,18 @@ public class Main {
 		System.out.println("Il punto si trova nella seguenti coordinate:\n X: " + terzoPunto.x + "\n Y: " + terzoPunto.y);
 		System.out.println(terzoPunto); //Questo Syso funziona solo se ho il toString() dichiarato nella classe, altrimenti vedo l'indirizzo alla memoria
 		
+		
+		//Creo un segmento passante per i punti "primoPunto" e "secondoPunto"
+		Segmento segm1 = new Segmento(primoPunto, secondoPunto);
+		double lungSegm1 = segm1.calcolaLunghezza();
+		System.out.println("Il segmento misura: " + lungSegm1 + " cm ");
+		System.out.println(segm1);
+		
+		Segmento segm2 = new Segmento(new Punto(9,8), new Punto(3, 2));
+		segm2.calcolaLunghezza();
+		System.out.println(segm2);
+		
 	}
+	
 
 }
