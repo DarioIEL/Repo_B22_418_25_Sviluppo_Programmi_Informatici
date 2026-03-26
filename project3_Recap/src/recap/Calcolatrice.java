@@ -69,7 +69,7 @@ public class Calcolatrice {
 				uscita = true;
 				break;
 			default:
-				System.out.println("Operazione non valida");
+
 			}
 			
 		}
