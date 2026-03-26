@@ -37,8 +37,9 @@ public class Stringhe {
 		
 		//Un altro modo di dichiarare una stringa usando il metodo costruttore con la parola chiave new
 		String tuoNome = new String("Dario");
-//		String nomeStudente = new String("Sahar");
-		String nomeStudente = "Sahar";
+		String nomeStudente = new String("Sahar");
+//		String nomeStudente = "Sahar";
+		
 		
 		if(mioNome.equals(tuoNome)) {
 			System.out.println("Abbiamo lo stesso nome");
@@ -47,6 +48,15 @@ public class Stringhe {
 		}
 		
 		
+		String altroNome = new String("Pippo");
+		String suoNome = new String("Pippo");
+//		String suoNome = "Pippo";
+		
+		if(altroNome.equals(suoNome)) {
+			System.out.println("I due nomi sono uguali");
+		}else {
+			System.out.println("I due nomi sono diversi");
+		}
 		
 	}
 }
