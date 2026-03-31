@@ -12,7 +12,6 @@ public class Punto {
 
 	public Punto() {}
 	
-
 	public Punto(double x, double y) {
 		this.x = x;
 		this.y = y;
@@ -26,7 +25,6 @@ public class Punto {
 	public String toString() {
 		return "Punto [x=" + x + ", y=" + y + "]";
 	}
-	
 	
 
 }

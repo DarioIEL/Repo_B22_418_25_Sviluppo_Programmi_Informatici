@@ -27,5 +27,18 @@ public class TesterPersonaStudente {
 		 * studia() --- Questo metodo stampa le materie che sta studiando lo studente
 		 * aggiungiMateria(String materia) --- Questo metodo aggiunge una materia
 		 */
+		
+		Studente stud1 = new Studente("Pippo", "Rossi", 30, "p.rossi@mail.com");
+		System.out.println(stud1);
+		stud1.saluta();
+		stud1.aggiungiMaterie("JAVA");
+		stud1.aggiungiMaterie("Database");
+		stud1.aggiungiMaterie("HTML", "CSS");
+		stud1.aggiungiMaterie("MAtematica", "Chimica", "Fisica");
+		
+		String[] nuoveMaterie = {"Biologia", "Analisi I", "Storia"};
+		stud1.aggiungiMaterie(nuoveMaterie);
+		
+		stud1.studia();
 	}
 }
