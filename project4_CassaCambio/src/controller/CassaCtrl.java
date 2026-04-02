@@ -31,6 +31,7 @@ public class CassaCtrl {
 		Cambio cambio = cassa.eseguiCambio(importoEuro);
 		
 		if(cambio != null) {
+			registroCambi.registraCambio(cambio);
 			stampaScontrino(cambio);
 			return "Cambio eseguito correttamente. Importo Dollari: " + cambio.getImportoDollari() +"\nEuro versati: " + cambio.getImportoEuro();
 		}
