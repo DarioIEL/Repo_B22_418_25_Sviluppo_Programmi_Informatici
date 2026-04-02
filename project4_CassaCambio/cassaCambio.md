@@ -7,6 +7,6 @@ Deve contenere le seguenti funzionalità:
 
 5. Inserisci una classe RegistroCambiCtrl nella quale elabori i metodi per lo storico dei cambi
 6. Dentro la classe CassaCtrl inserisci un metodo "stampaRicevutaCambio" (stampaScontrino)
-7. Elabora il main (menu per interragire con la cassa)
+7. Elabora il main (menu per interagire con la cassa)
 
 

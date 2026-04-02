@@ -1,14 +1,18 @@
 package controller;
 
+import java.util.List;
+
 import model.Cambio;
 import model.Cassa;
 
 public class CassaCtrl {
 
 	private Cassa cassa;
+	private RegistroCtrl registroCambi;
 
 	public CassaCtrl(String nome, double fondoDollari) {
 		this.cassa = new Cassa(nome, fondoDollari);
+		this.registroCambi = new RegistroCtrl();
 	}
 	
 	public boolean aggiungiDollari(double importo) {
@@ -39,6 +43,29 @@ public class CassaCtrl {
 		System.out.println(cassa.toString());
 	}
 
+	
+	public String getStoricoCambi() {
+		return registroCambi.getStoricoCambi();
+	}
+	
+	public String getStoricoCambi2() {
+		
+		List<Cambio> listaCambi = registroCambi.getListaCambi();
+		
+		StringBuilder sb = new StringBuilder();
+		if(listaCambi.size() != 0) {
+			for (Cambio cambio : listaCambi) {
+				sb.append(cambio.toString());
+			}
+			
+			return sb.toString();
+		}
+		
+		return "Mi spiace, non ci sono cambi effettuati";
+		
+	}
+	
+	
 	private static String stampaScontrino(Cambio cambio) {
 		return "";
 	}
