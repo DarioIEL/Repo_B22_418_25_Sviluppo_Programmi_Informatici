@@ -53,6 +53,8 @@ public class Esempio_ArrayList {
 			System.out.println(nome);
 		}
 		
+		nomi.forEach(nome -> System.out.println(nome));
+		
 		//TRASFORMO UN ARRAYLIST IN UN ARRAY
 		String[] nomiPersone = new String[nomi.size()];
 		for(int i = 0; i < nomi.size(); i++) {

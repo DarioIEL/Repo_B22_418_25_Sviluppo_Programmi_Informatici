@@ -17,5 +17,8 @@ public class TesterConto {
 		
 		cc2.getInfoConto();
 		
+		ContoCorrenteStatic ccs = new ContoCorrenteStatic("Laura Gialli", 4000);
+		ccs.getInfoConto();
+		
 	}
 }

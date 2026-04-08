@@ -22,7 +22,7 @@ public class ContoCorrenteStatic {
 	}
 	
 	public void getInfoConto() {
-		System.out.println("Proprietario: " + proprietario + "\nNumero Conto: " + numeroConto + "\nSaldo: "+  saldo + "Grazie da: " + BANCA);
+		System.out.println("Proprietario: " + proprietario + "\nNumero Conto: " + numeroConto++ + "\nSaldo: "+  saldo + "Grazie da: " + BANCA);
 	}
 	
 	public static int getNumeroConto() {
