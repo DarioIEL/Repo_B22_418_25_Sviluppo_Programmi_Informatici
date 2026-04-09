@@ -3,7 +3,7 @@ package Lezione8_Polimorfismo;
 public class Main {
 public static void main(String[] args) {
 	
-	//upcasting: assegno un oggetto di una sottoclasse (Rettangolo) a una variabile di tipo superclasse(FormGeometrica). Posso usare un rettangolo come forma geometrica ma quando sono a runtime uso il comportamento del rettangolo. 
+	//UPCASTING: assegno un oggetto di una sottoclasse (Rettangolo) a una variabile di tipo superclasse(FormGeometrica). Posso usare un rettangolo come forma geometrica ma quando sono a runtime uso il comportamento del rettangolo. 
 	//Con l'upcasting posso mettere oggetti diversi nella stessa variabile (vedi array di formegeometriche)
 	FormaGeometrica rett = new Rettangolo("blue", 5.2, 1.4);
 	rett.descrivi(); //Questo metodo appartiene alla forma geometrica
@@ -21,7 +21,7 @@ public static void main(String[] args) {
 	tri.descrivi();
 	System.out.println("L'area del triangolo vale: " + tri.calcolaArea());
 	
-	//Grazie all'upcasting posso creare delle liste di formeGeometriche
+	//Grazie all'upcasting posso creare delle liste di FormeGeometriche
 	FormaGeometrica forme[] = {
 		new Rettangolo("yellow", 8, 9),
 		new Triangolo("black", 4, 5),
