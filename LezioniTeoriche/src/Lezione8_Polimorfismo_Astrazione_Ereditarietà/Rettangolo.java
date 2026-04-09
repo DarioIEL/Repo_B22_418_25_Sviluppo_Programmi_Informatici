@@ -1,4 +1,4 @@
-package Lezione8_Polimorfismo;
+package Lezione8_Polimorfismo_Astrazione_Ereditarietà;
 
 //La classe Rettangolo (classe concreta) può estendere solo una superclasse
 public class Rettangolo extends FormaGeometrica {

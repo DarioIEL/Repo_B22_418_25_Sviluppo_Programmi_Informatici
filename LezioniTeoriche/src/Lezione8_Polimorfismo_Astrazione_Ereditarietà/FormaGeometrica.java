@@ -1,4 +1,4 @@
-package Lezione8_Polimorfismo;
+package Lezione8_Polimorfismo_Astrazione_Ereditarietà;
 
 //Dichiaro questa classe abstract per avere un modello comune a tutte le classi che la estendono.
 //Posso adesso implementare dei metodi che la classe figlia sarà obbligata a specificare.
