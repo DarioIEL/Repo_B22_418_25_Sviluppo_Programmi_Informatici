@@ -1,5 +1,5 @@
 package gestionePokemon.tipi;
 
-public class TipoElettro {
+public abstract class TipoElettro {
 
 }
