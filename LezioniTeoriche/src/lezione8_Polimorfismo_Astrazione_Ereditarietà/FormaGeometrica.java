@@ -1,4 +1,4 @@
-package Lezione8_Polimorfismo_Astrazione_Ereditarietà;
+package lezione8_Polimorfismo_Astrazione_Ereditarietà;
 
 //Dichiaro questa classe abstract per avere un modello comune a tutte le classi che la estendono.
 //Posso adesso implementare dei metodi che la classe figlia sarà obbligata a specificare.
@@ -9,7 +9,7 @@ public abstract class FormaGeometrica {
 	protected String colore;
 
 	public FormaGeometrica(String colore) {
-		this.colore = colore;
+		this.colore =colore;
 	}
 	
 

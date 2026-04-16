@@ -1,4 +1,4 @@
-package Lezione8_Polimorfismo_Astrazione_Ereditarietà;
+package lezione8_Polimorfismo_Astrazione_Ereditarietà;
 
 public class Triangolo extends FormaGeometrica{
 
