@@ -1,6 +1,6 @@
 package lezione01_Intro;
 
-import lezione3_Metodi.Intro;
+import lezione03_Metodi.Intro;
 
 public class Stringhe {
 	public static void main(String[] args) {
