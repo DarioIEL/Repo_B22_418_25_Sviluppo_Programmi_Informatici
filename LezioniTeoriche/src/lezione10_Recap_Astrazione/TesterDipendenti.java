@@ -1,5 +1,7 @@
 package lezione10_Recap_Astrazione;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class TesterDipendenti {
@@ -25,5 +27,17 @@ public class TesterDipendenti {
 //		double stipendioCons = cons.calcolaStipendio();
 //		System.out.println(cons.stampaInfo() + "\nStipendio: €" + stipendioCons);
 		System.out.println(cons.stampaInfo());
+		
+		
+		List<Dipendente> listaDipendenti = new ArrayList<>();
+		listaDipendenti.add(new Developer("Dario", "Mennillo", "qwertyui", new Date()));
+		
+		//Upcasting
+		Dipendente consulenteIT = new Consulente("Anna", "Verdi", "qwerty", new Date());
+		consulenteIT.calcolaStipendio(); //Questo è il metodo del Dipendente (questo è un po' un limite)
+		//Questo sotto si chiama downcasting
+		Consulente cIT = (Consulente) consulenteIT;
+		cIT.calcolaStipendio(); //QUesto metodo è di consulente
+		
 	}
 }
