@@ -1,5 +1,9 @@
 package lezione11_eccezioni;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.Buffer;
+
 public class throwGestione {
 	
 	public static void calcolaDivisione(int numero, int divisore) {
@@ -55,7 +59,13 @@ public class throwGestione {
 			e.printStackTrace();
 		}
 		
-		
+		BufferedReader br = new BufferedReader(null);
+		try {
+			br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	
