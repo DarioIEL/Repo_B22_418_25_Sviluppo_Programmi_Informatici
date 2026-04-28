@@ -1,6 +1,7 @@
 package controller;
 
 import dao.DipendentiDAO;
+import model.Dipendente;
 
 public class DipendenteCtrl {
 
@@ -13,4 +14,9 @@ public class DipendenteCtrl {
 	public void aggiungiDipendente(Dipendente d) {
 		dao.save(d);
 	}
+	
+//	getTutti
+//	cercaPerCodiceFiscale
+//	esportaCSV
+	
 }
