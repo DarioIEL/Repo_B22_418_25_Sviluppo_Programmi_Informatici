@@ -30,6 +30,7 @@ public class throwGestione {
 	
 	public static void main(String[] args) {
 		
+
 		try {			
 			calcolaDivisione(10, 0);
 		}catch (ArithmeticException e) {
@@ -37,7 +38,7 @@ public class throwGestione {
 			System.out.println("Non puoi dividere per 0");
 		}
 		
-		
+	
 		
 		try {
 			stampaTesto(null);
