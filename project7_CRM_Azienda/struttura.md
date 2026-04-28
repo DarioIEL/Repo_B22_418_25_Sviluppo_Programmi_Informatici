@@ -16,4 +16,7 @@
 	- Studente Grafica
 	
 	
-Al termine crea un file con l'elenco di dipendenti (opzionale)
+Al termine crea un file con l'elenco di dipendenti (opzionale) formato csv leggibile
+
+
+Model -> DAO -> Controller - View

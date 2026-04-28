@@ -20,15 +20,30 @@ public class Main {
 //			System.out.println(stud);
 //		}
 		
-//		COMPARETO CON PIÙ CAMPI
-		List<Studente> listaStudenti = new ArrayList<>();
-		listaStudenti.add(new Studente("Nicola", "Rossi", 30));
-		listaStudenti.add(new Studente("Mario", "Rossi", 25));
-		listaStudenti.add(new Studente("Maria", "Rossi", 25));
+//		COMPARETO CON PIÙ CAMPI - ORDINAMENTO
+//		List<Studente> listaStudenti = new ArrayList<>();
+//		listaStudenti.add(new Studente("Nicola", "Rossi", 30));
+//		listaStudenti.add(new Studente("Mario", "Rossi", 25));
+//		listaStudenti.add(new Studente("Maria", "Rossi", 25));
+//		
+//		Collections.sort(listaStudenti);
+//		
+//		listaStudenti.forEach(System.out::println);
 		
-		Collections.sort(listaStudenti);
+//		CompareTo su tutti i campi allo stesso momento
 		
-		listaStudenti.forEach(System.out::println);
+		Studente s1 = new Studente("Anna", "Rossi", 30);
+		Studente s2 = new Studente("Anna", "Verdi", 27);
+		
+		int res = s1.compareTo(s2);
+		
+		if(res == 0) {
+			System.out.println("Attenzione: hai due studenti identici");
+		}else if (res < 0 ) {
+			System.out.println(s1 + " precede " + s2);
+		}else {
+			System.out.println(s1 + " segue " + s2);
+		}
 		
 	}
 }

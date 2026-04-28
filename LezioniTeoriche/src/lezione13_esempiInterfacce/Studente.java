@@ -21,6 +21,11 @@ public class Studente implements Comparable<Studente>{
 		return "Studente [nome=" + nome + ", cognome=" + cognome + ", voto=" + voto + "]";
 	}
 
+
+
+
+
+
 	//il metodo compareTo restituisce un valore:
 	// < 0 (this viene prima di altroStudente)
 	// = 0 (this è uguale ad altro)
@@ -33,16 +38,33 @@ public class Studente implements Comparable<Studente>{
 //	}
 
 
+//	oRDINAMENTO con più campi
+//	@Override
+//	public int compareTo(Studente altroStudente) {
+//		int cmp = this.cognome.compareTo(altroStudente.cognome);
+//		if(cmp != 0) return cmp;
+//		
+//		cmp = this.nome.compareTo(altroStudente.nome);
+//		if(cmp != 0) return cmp;
+//		
+//		return Integer.compare(this.voto, altroStudente.voto);
+//	}
+	
+//	Uguaglianza Totale
 	@Override
 	public int compareTo(Studente altroStudente) {
-		int cmp = this.cognome.compareTo(altroStudente.cognome);
+		int cmp = Double.compare(this.voto, altroStudente.voto);
 		if(cmp != 0) return cmp;
 		
 		cmp = this.nome.compareTo(altroStudente.nome);
+		if(cmp != 0 ) return cmp;
+		
+		cmp = this.cognome.compareTo(altroStudente.cognome);
 		if(cmp != 0) return cmp;
 		
-		return Integer.compare(this.voto, altroStudente.voto);
+		return cmp;
 	}
+	
 	
 	
 }
