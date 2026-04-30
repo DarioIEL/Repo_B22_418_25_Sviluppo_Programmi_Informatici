@@ -18,6 +18,7 @@ public class Main {
 				new Rettangolo(3, 2)
 		};
 		
+
 		
 		for (Forma f : forme) {
 			System.out.println(f.descrivi());

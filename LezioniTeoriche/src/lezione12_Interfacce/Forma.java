@@ -3,13 +3,13 @@ package lezione12_Interfacce;
 public interface Forma {
 
 	//colore è una costatnte (implicitamente public static final). Ricorda: il modificatore static determina che quella prop o metodo appartengano solo alla classe, in questo caso all'interfaccia
-	String COLORE= "blue";
+	String COLORE = "blue";
 	
 	//Metodi implicitamente public abstract e senza implementazione
 	double calcolaArea();
 	double calcolaPerimetro();
 	
-	//Posso avere l'overload di metodi
+	//Posso avere l'overload di metodi sapendo di doverli comunque sviluppare
 	double calcolaPerimetro(double moltiplicatore);
 	
 	double calcolaVolume(double profondita);

@@ -3,6 +3,7 @@ package lezione12_Interfacce;
 public class Cerchio implements Forma {
 
 	private double raggio;
+	private static final String MARCA = "Geometria Canaglia";
 	
 	
 	public Cerchio(double raggio) {
@@ -24,7 +25,7 @@ public class Cerchio implements Forma {
 	@Override
 	public String descrivi() {
 		// TODO Auto-generated method stub
-		return "Questo è un CERCHIO " + Forma.super.descrivi();
+		return "Questo è un CERCHIO di marca " + this.MARCA + " " + Forma.super.descrivi();
 	}
 
 	

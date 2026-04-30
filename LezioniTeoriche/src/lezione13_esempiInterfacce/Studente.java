@@ -12,18 +12,11 @@ public class Studente implements Comparable<Studente>{
 		this.voto = voto;
 	}
 
-
-	
-
 	
 	@Override
 	public String toString() {
 		return "Studente [nome=" + nome + ", cognome=" + cognome + ", voto=" + voto + "]";
 	}
-
-
-
-
 
 
 	//il metodo compareTo restituisce un valore:

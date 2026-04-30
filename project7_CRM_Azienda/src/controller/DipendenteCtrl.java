@@ -1,18 +1,19 @@
 package controller;
 
-import dao.DipendentiDAO;
+import dao.DipendentiDAOImpl;
 import model.Dipendente;
 
 public class DipendenteCtrl {
 
-	private final DipendentiDAO dao;
+	//Il controller usa il dao
+	private final DipendentiDAOImpl dao;
 
-	public DipendenteCtrl(DipendentiDAO dao) {
+	public DipendenteCtrl(DipendentiDAOImpl dao) {
 		this.dao = dao;
 	}
 	
 	public void aggiungiDipendente(Dipendente d) {
-		dao.save(d);
+		dao.add(d);
 	}
 	
 //	getTutti

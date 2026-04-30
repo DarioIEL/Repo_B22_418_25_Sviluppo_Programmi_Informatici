@@ -13,7 +13,8 @@ public class StudenteInformatica extends Studente {
 	@Override
 	public void assegnaCorsi(List<Corso> nuoviCorsi) {
 		nuoviCorsi.stream()
-				.filter(c -> c.getCodice().startsWith("INF")) //questa lambda lascia passare solo gli elementi true
+				.filter(c -> c.getCodice().startsWith("INF"))//questa lambda lascia passare solo gli elementi true
+				
 				.forEach(corsi::add); //metodo reference
 	}
 
