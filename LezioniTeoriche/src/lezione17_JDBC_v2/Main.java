@@ -18,13 +18,18 @@ public class Main {
 //		System.out.println("Studente creato: " + creato);
 		
 		boolean creato = service.aggiungiStudente("Anna", "Verdi", "Sviluppo Software", "anna@mail.com");
-		System.out.println("Studente Creato");
 		
-// Leggi tutti
-		List<Studente> tuttiStudenti = dao.readAll();
+		
+// 		Leggi tutti
+		List<Studente> tuttiStudenti = service.tuttiGliStudenti();
 		System.out.println("Lista Studenti completa");
 		for(Studente s: tuttiStudenti) {
 			System.out.println(s);
 		};
+	
+//	 	Leggi con ID
+		Studente stud = service.cercaStudente(4);
+		System.out.println("Trovato: " + stud);
+	
 	}
 }

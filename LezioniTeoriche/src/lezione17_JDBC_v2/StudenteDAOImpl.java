@@ -47,16 +47,31 @@ public class StudenteDAOImpl implements StudenteDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return false;
 		} finally {
 			dbConn.closeConnessione(conn);
 		}
 
-		return false;
 	}
 
 	@Override
 	public Studente readById(int id) {
-		// TODO Auto-generated method stub
+		
+		Connection conn = dbConn.getConnessione();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(GET_BY_ID);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				return mappaStudente(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			dbConn.closeConnessione(conn);
+		}
+		
 		return null;
 	}
 
@@ -83,29 +98,88 @@ public class StudenteDAOImpl implements StudenteDAO {
 	}
 
 	@Override
-	public boolean update(Studente entity) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean update(Studente studente) {
+		Connection conn = dbConn.getConnessione();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(UPDATE);
+			ps.setString(1, studente.getNome());
+			ps.setString(2, studente.getCognome());
+			ps.setString(3, studente.getCorso());
+			ps.setString(4, studente.getEmail());
+			ps.setInt(5,studente.getId());
+			int righe = ps.executeUpdate();
+			return righe > 0;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}finally {
+			dbConn.closeConnessione(conn);
+		}
+		
 	}
 
 	@Override
 	public boolean delete(int id) {
-		// TODO Auto-generated method stub
-		return false;
+
+		Connection conn = dbConn.getConnessione();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(DELETE);
+			ps.setInt(1, id);
+			int righe = ps.executeUpdate();
+			return righe > 0;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}finally {
+			dbConn.closeConnessione(conn);
+		}
 	}
 
 	
 	//QUESTI SOTTO SONO I METODI SPECIFICI (arrivano da StudenteDAO)
 	@Override
 	public Studente getStudenteByEmail(String email) {
-		// TODO Auto-generated method stub
+		Connection conn = dbConn.getConnessione();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(GET_BY_EMAIL);
+			ps.setString(1, email);
+			ResultSet rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				return mappaStudente(rs);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			dbConn.closeConnessione(conn);
+		}
+		
 		return null;
 	}
 
 	@Override
 	public List<Studente> getStudentiByCorso(String corso) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Studente> studenti = new ArrayList<>();
+		Connection conn = dbConn.getConnessione();
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(GET_BY_CORSO);
+			ps.setString(1, corso);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				studenti.add(mappaStudente(rs));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			dbConn.closeConnessione(conn);
+		}
+		return studenti;
 	}
 
 }
