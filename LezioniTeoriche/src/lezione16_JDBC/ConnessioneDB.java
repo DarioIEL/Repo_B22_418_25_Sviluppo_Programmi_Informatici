@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ConnessioneDB {
 
-	private static final String URL = "jdbc:mysql://localhost:3306/cinema";
+	private static final String URL = "jdbc:mysql://127.0.0.1:3306/gestione_scuola";
 	private static final String USER = "root";
-	private static final String PASS = "root";
+	private static final String PASS = "Dario_89";
 	
 	private static Connection connection = null;
 	
@@ -19,7 +19,7 @@ public class ConnessioneDB {
 	public void connetti() {
 		try {
 			
-			this.connection = DriverManager.getConnection(URL, USER, PASS);
+			this.connection = DriverManager.getConnection(URL,USER,PASS);
 			System.out.println("Connessione avvenuta");
 			
 		} catch (SQLException e) {
