@@ -47,6 +47,14 @@ public class LibroRepository {
 				.findFirst();
 	}
 	
+	public boolean elimina(Long id) {
+		return archivio.removeIf(lib -> lib.getId().equals(id));
+	}
+	
+	public boolean eliminaByObj(Libro libro) {
+		return archivio.remove(libro);
+	}
+	
 	
 	
 }
