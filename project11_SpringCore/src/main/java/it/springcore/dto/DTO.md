@@ -5,7 +5,7 @@ Questo succede perché io posso esporre (in output) solo parzialmente dei dati o
  - LibroRequest definisce cosa accetto
  - LibroResponse definisce cosa espongo
  
- ATT: potremmo anche avere solo una classe LibroDTO e bast
+ ATT: potremmo anche avere solo una classe LibroDTO e basta
  
  L'uso del DTO serve a :
  1. Separare le responsabilità. Il model Libro rappresenta i dati interni non quelli che voglio per forza esporre
