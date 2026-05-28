@@ -1,5 +1,10 @@
 package it.springcorejpa.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 //import jakarta.persistence.Entity;
 //import jakarta.persistence.Table;
 
@@ -18,19 +23,28 @@ public class Libro {
 	//Il nome della colonna viene automaticamente tradotto con il nome della singola proprietà: attenzione al caso in cui la colonna ha un nome diverso dalla proprietà che stai utilizzando
 	@Column(nullable = false, length = 100)
 	private String titolo;
-	
-	@Column(nullable = false, length = 100)
-	private String autore;
+
+//Commento la colonna autore per poter fare il ManyToMany
+//	@Column(nullable = false, length = 100)
+//	private String autore;
 	
 	@Column(nullable = false)
 	private double prezzo;
 	
+	@JsonIgnoreProperties("libri") //FONDAMENTALE per far si che Jackson(JSON serializer) non vada in ridondanza
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable( //L'entità che possiede @Jointable è l'entità Owner
+		name = "libri_autori", //nome tabella ponte
+		joinColumns = @JoinColumn(name = "libro_id"),  //FK->libri.id
+		inverseJoinColumns = @JoinColumn(name = "autore_id")  //FK-autori.id
+	)
+	private Set<Autore> autori = new HashSet<>();
+	
 	
 	protected Libro() {} //uso un costruttore protected perché voglio che sono JPA/hibernate lo possano utilizzare
 
-	public Libro(String titolo, String autore, double prezzo) {
+	public Libro(String titolo, double prezzo) {
 		this.titolo = titolo;
-		this.autore = autore;
 		this.prezzo = prezzo;
 	}
 
@@ -46,15 +60,6 @@ public class Libro {
 	}
 
 
-	public String getAutore() {
-		return autore;
-	}
-
-
-	public void setAutore(String autore) {
-		this.autore = autore;
-	}
-
 
 	public double getPrezzo() {
 		return prezzo;
@@ -65,6 +70,18 @@ public class Libro {
 		this.prezzo = prezzo;
 	}
 
+	public Set<Autore> getAutori() {
+		return autori;
+	}
+
+	//Metodi per gestire la relazione libro->autore
+	public void aggiungiAutore(Autore autore) {
+		this.autori.add(autore);
+	}
+	
+	public void rimuoviAutore(Autore autore) {
+		this.autori.remove(autore);	
+	}
 	
 	
 	
