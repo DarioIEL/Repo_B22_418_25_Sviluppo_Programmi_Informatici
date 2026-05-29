@@ -76,6 +76,25 @@ public class LibroController {
 	}
 	
 	
+	/*
+	 * Creo un metodo per accettare un oggetto completo (libro + autori)
+	 * {
+	 * 		"titolo": "Spring per Neofiti",
+	 * 		"prezzo": 55.90,
+	 * 		"autori" : [
+	 * 				{"nome": "Dario", "cognome": "Mennillo"}
+	 * 				{"nome": "Oscar", "cognome": "Vecchione"}
+	 * 				]
+	 * }
+	 */
+	
+		
+	@PostMapping("/libri/completo")
+	public ResponseEntity<Libro> creaLibroCompleto(@RequestBody Libro libroCompleto){
+		Libro nuovoCreato = service.creaLibroCompleto(libroCompleto);
+		return ResponseEntity.status(HttpStatus.CREATED).body(nuovoCreato);
+	}
+	
 	
 	
 	

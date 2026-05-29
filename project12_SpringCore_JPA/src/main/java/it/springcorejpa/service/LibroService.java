@@ -1,7 +1,9 @@
 package it.springcorejpa.service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
@@ -68,6 +70,26 @@ public class LibroService {
 	
 	public Autore cercaAutoreById(Integer id) {
 		return repoAutori.findById(id).orElse(null);
+	}
+	
+	public Libro creaLibroCompleto(Libro libroCompleto) {
+		//Per ogni autore cerca o crea se non esiste nel DB
+		Set<Autore> autori = new HashSet<>();
+		for(Autore a : libroCompleto.getAutori()) {
+			Autore autoreEsistente = repoAutori.findByNomeAndCognome(a.getNome(), a.getCognome())
+											   .orElseGet(() -> repoAutori.save(a));
+			autori.add(autoreEsistente);
+		}
+		
+		//Creo il nuovo libro
+		Libro nuovo = new Libro(libroCompleto.getTitolo(), libroCompleto.getPrezzo());
+		
+		//Associo
+		for(Autore autore: autori) {
+			nuovo.aggiungiAutore(autore);
+		}
+		
+		return repository.save(nuovo);
 	}
 	
 }
