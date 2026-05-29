@@ -17,12 +17,9 @@ public interface LibroRepository extends JpaRepository<Libro, Integer> {
 	//Questa query sotto è la query della join
 	List<Libro> findByAutoriCognome(String cognome);
 	
-	//SELECT l.* from libri l
-	//JOIN libri_autori la ON l.id = la.libro_id
-	//JOIN autori a ON la.autore_id = a.id
-	//WHERE a.cognome = ?
+//	SELECT l.* from libri l
+//	JOIN libri_autori la ON l.id = la.libro_id
+//	JOIN autori a ON la.autore_id = a.id
+//	WHERE a.cognome = ?
 	
-
-
-
 }
