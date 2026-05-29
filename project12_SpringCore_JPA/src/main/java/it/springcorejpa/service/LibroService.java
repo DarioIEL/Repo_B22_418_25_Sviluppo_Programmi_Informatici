@@ -37,12 +37,37 @@ public class LibroService {
 				.orElse(null);
 	}
 	
+	public Libro creaLibro(String titolo, double prezzo) {
+		Libro nuovo = new Libro(titolo, prezzo);
+		return repository.save(nuovo);
+	}
+
+	
 	//Questo metodo sotto trattiene la relazione @ManyToMany
 	public List<Libro> cercaPerAutore(String cognome){
 		return repository.findByAutoriCognome(cognome);
 	}
 
+	
 	public List<Autore> elencoAutori(){
 		return repoAutori.findAll();
 	}
+	
+	public Autore creaAutore(String nome, String cognome) {
+		Autore nuovoAutore = new Autore(nome, cognome);
+		return repoAutori.save(nuovoAutore);
+	}
+	
+	public Libro aggiungiAutoreALibro(Integer libroId, Integer autoreId) {
+		Libro libro = repository.findById(libroId).orElse(null);
+		Autore autore = repoAutori.findById(autoreId).orElse(null);
+		
+		libro.aggiungiAutore(autore);
+		return repository.save(libro); //salva lato Owner e aggiorna la tabella ponte
+	}
+	
+	public Autore cercaAutoreById(Integer id) {
+		return repoAutori.findById(id).orElse(null);
+	}
+	
 }
