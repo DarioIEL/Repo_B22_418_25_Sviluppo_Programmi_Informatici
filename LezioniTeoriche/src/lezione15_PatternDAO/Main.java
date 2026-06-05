@@ -5,7 +5,6 @@ public static void main(String[] args) {
 	
 //PROGRAMMING TO INTERFACE: 
 //	accoppiamento loose: approccio migliore nella programmazione con i DAO
-	
 //	SpettatoreDAO spettatoreDAO = new SpettatoreDAOImplMySql(); 
 	SpettatoreDAO spettatoreDAO = new SpettatoreDAOImpl();
 	
